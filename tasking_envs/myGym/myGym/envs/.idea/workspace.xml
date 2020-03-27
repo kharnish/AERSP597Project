@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="92b2107a-356c-4418-aa51-624c40e32713" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1W4LpsEcVIwNamyBdDsOK5PUs8S" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.DQNAgent3Original">
+    <configuration name="DQNAgent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="envs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DQNAgent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DQNAgent3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="envs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DQNAgent3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DQNAgent3Original" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="envs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DQNAgent3Original.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="QAgent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="envs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QAgent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="random_agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="envs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_agent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.DQNAgent3Original" />
+      <item itemvalue="Python.DQNAgent3" />
+      <item itemvalue="Python.DQNAgent" />
+      <item itemvalue="Python.QAgent" />
+      <item itemvalue="Python.random_agent" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.DQNAgent3Original" />
+        <item itemvalue="Python.random_agent" />
+        <item itemvalue="Python.DQNAgent3" />
+        <item itemvalue="Python.DQNAgent" />
+        <item itemvalue="Python.QAgent" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92b2107a-356c-4418-aa51-624c40e32713" name="Default Changelist" comment="" />
+      <created>1578404105701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578404105701</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="874" y="317" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578509021322">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state x="874" y="317" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1981.1253@67.27.1981.1253" timestamp="1578509021322" />
+    <state x="1144" y="424" width="592" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578501188362">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state x="1144" y="424" width="592" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1981.1253@67.27.1981.1253" timestamp="1578501188362" />
+    <state width="580" height="466" key="DebuggerActiveHint" timestamp="1578586100460">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="580" height="466" key="DebuggerActiveHint/67.27.1981.1253@67.27.1981.1253" timestamp="1578586100460" />
+    <state x="1161" y="486" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578665700223">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state x="1161" y="486" width="424" height="484" key="FileChooserDialogImpl/67.27.1981.1253@67.27.1981.1253" timestamp="1578665700223" />
+    <state width="1369" height="280" key="GridCell.Tab.0.bottom" timestamp="1578662721340">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="1369" height="280" key="GridCell.Tab.0.bottom/67.27.1981.1253@67.27.1981.1253" timestamp="1578662721340" />
+    <state width="1369" height="280" key="GridCell.Tab.0.center" timestamp="1578662721339">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="1369" height="280" key="GridCell.Tab.0.center/67.27.1981.1253@67.27.1981.1253" timestamp="1578662721339" />
+    <state width="1369" height="280" key="GridCell.Tab.0.left" timestamp="1578662721338">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="1369" height="280" key="GridCell.Tab.0.left/67.27.1981.1253@67.27.1981.1253" timestamp="1578662721338" />
+    <state width="1369" height="280" key="GridCell.Tab.0.right" timestamp="1578662721339">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="1369" height="280" key="GridCell.Tab.0.right/67.27.1981.1253@67.27.1981.1253" timestamp="1578662721339" />
+    <state width="1089" height="311" key="GridCell.Tab.1.bottom" timestamp="1578661443486">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="1089" height="311" key="GridCell.Tab.1.bottom/67.27.1981.1253@67.27.1981.1253" timestamp="1578661443486" />
+    <state width="1089" height="311" key="GridCell.Tab.1.center" timestamp="1578661443486">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="1089" height="311" key="GridCell.Tab.1.center/67.27.1981.1253@67.27.1981.1253" timestamp="1578661443486" />
+    <state width="1089" height="311" key="GridCell.Tab.1.left" timestamp="1578661443486">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="1089" height="311" key="GridCell.Tab.1.left/67.27.1981.1253@67.27.1981.1253" timestamp="1578661443486" />
+    <state width="1089" height="311" key="GridCell.Tab.1.right" timestamp="1578661443486">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state width="1089" height="311" key="GridCell.Tab.1.right/67.27.1981.1253@67.27.1981.1253" timestamp="1578661443486" />
+    <state x="966" y="398" width="890" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1578511766310">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state x="966" y="398" width="890" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1981.1253@67.27.1981.1253" timestamp="1578511766310" />
+    <state x="1125" y="94" width="918" height="956" key="dock-window-1" timestamp="1578503733181">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state x="1125" y="94" width="918" height="956" key="dock-window-1/67.27.1981.1253@67.27.1981.1253" timestamp="1578503733181" />
+    <state x="96" y="64" width="965" height="1079" key="dock-window-2" timestamp="1578660303003">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state x="96" y="64" width="965" height="1079" key="dock-window-2/67.27.1981.1253@67.27.1981.1253" timestamp="1578660303003" />
+    <state x="69" y="79" width="995" height="1050" key="dock-window-3" timestamp="1578660953042">
+      <screen x="67" y="27" width="1981" height="1253" />
+    </state>
+    <state x="69" y="79" width="995" height="1050" key="dock-window-3/67.27.1981.1253@67.27.1981.1253" timestamp="1578660953042" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DQNAgent3.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
