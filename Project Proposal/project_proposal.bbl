@@ -1,0 +1,232 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Anwar%
+}{%
+Anwar%
+}{%
+{\protect \APACyear {2019, October 23}}%
+}]{%
+Anwar2019}
+\APACinsertmetastar {%
+Anwar2019}%
+\begin{APACrefauthors}%
+Anwar, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019, October 23}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Deep Reinforcement Learning for Drones in 3D Realistic
+  Environments}} {{Deep Reinforcement Learning for Drones in 3D Realistic
+  Environments}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Towards Data Science}{}{}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://towardsdatascience.com/deep-reinforcement-learning-for-drones-in-3d-realistic-environments-36821b6ee077}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Araar%
+, Aouf%
+\BCBL {}\ \BBA {} Vitanov%
+}{%
+Araar%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+Araar2016}
+\APACinsertmetastar {%
+Araar2016}%
+\begin{APACrefauthors}%
+Araar, O.%
+, Aouf, N.%
+\BCBL {}\ \BBA {} Vitanov, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Vision Based Autonomous Landing of Multirotor UAV on
+  Moving Platform}} {{Vision Based Autonomous Landing of Multirotor UAV on
+  Moving Platform}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Intelligent \& Robotic
+  Systems}{85}{}{369-384}.
+\newblock
+\begin{APACrefURL}
+  \url{https://link.springer.com/article/10.1007/s10846-018-0891-8}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Carrio%
+, Sampedro%
+, Rodriguez-Ramos%
+\BCBL {}\ \BBA {} Campoy1%
+}{%
+Carrio%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017, August 14}}%
+}]{%
+Carrio2017}
+\APACinsertmetastar {%
+Carrio2017}%
+\begin{APACrefauthors}%
+Carrio, A.%
+, Sampedro, C.%
+, Rodriguez-Ramos, A.%
+\BCBL {}\ \BBA {} Campoy1, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017, August 14}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A Review of Deep Learning Methods and Applications for
+  Unmanned Aerial Vehicles}} {{A Review of Deep Learning Methods and
+  Applications for Unmanned Aerial Vehicles}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Sensors}{2017}{}{}.
+\newblock
+\begin{APACrefURL} \url{https://www.hindawi.com/journals/js/2017/3296874/}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Madaan%
+, Saxena%
+, Bonatti%
+, Mukherjee%
+\BCBL {}\ \BBA {} Scherer%
+}{%
+Madaan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+Madaan}
+\APACinsertmetastar {%
+Madaan}%
+\begin{APACrefauthors}%
+Madaan, R.%
+, Saxena, D\BPBI M.%
+, Bonatti, R.%
+, Mukherjee, S.%
+\BCBL {}\ \BBA {} Scherer, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Deep Flight: Autonomous Quadrotor Navigation with Deep
+  Reinforcement Learning }} {{Deep Flight: Autonomous Quadrotor Navigation with
+  Deep Reinforcement Learning }}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The Robotics Institute, Carnegie Mellon
+  University}{}{}{}.
+\newblock
+\begin{APACrefURL} \url{https://www.cs.cmu.edu/~rbonatti/files/rss17.pdf}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pham%
+, La%
+, Feil{-}Seifer%
+\BCBL {}\ \BBA {} Nguyen%
+}{%
+Pham%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Pham2018}
+\APACinsertmetastar {%
+Pham2018}%
+\begin{APACrefauthors}%
+Pham, H\BPBI X.%
+, La, H\BPBI M.%
+, Feil{-}Seifer, D.%
+\BCBL {}\ \BBA {} Nguyen, L\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Autonomous {UAV} Navigation Using Reinforcement
+  Learning} {Autonomous {UAV} navigation using reinforcement learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{CoRR}{abs/1801.05086}{}{}.
+\newblock
+\begin{APACrefURL} \url{http://arxiv.org/abs/1801.05086} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rodriguez-Ramos%
+, Sampedro%
+, Bavle%
+, de~la Puente%
+\BCBL {}\ \BBA {} Campoy%
+}{%
+Rodriguez-Ramos%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018, July 3}}%
+}]{%
+Rodriguez2018}
+\APACinsertmetastar {%
+Rodriguez2018}%
+\begin{APACrefauthors}%
+Rodriguez-Ramos, A.%
+, Sampedro, C.%
+, Bavle, H.%
+, de~la Puente, P.%
+\BCBL {}\ \BBA {} Campoy, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018, July 3}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A Deep Reinforcement Learning Strategy for UAV
+  Autonomous Landing on a Moving Platform}} {{A Deep Reinforcement Learning
+  Strategy for UAV Autonomous Landing on a Moving Platform}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Intelligent \& Robotic
+  Systems}{93}{}{351-366}.
+\newblock
+\begin{APACrefURL}
+  \url{https://link.springer.com/article/10.1007/s10846-018-0891-8}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Shin%
+, Kang%
+\BCBL {}\ \BBA {} Kim%
+}{%
+Shin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+Shin2019}
+\APACinsertmetastar {%
+Shin2019}%
+\begin{APACrefauthors}%
+Shin, S\BHBI Y.%
+, Kang, Y\BHBI W.%
+\BCBL {}\ \BBA {} Kim, Y\BHBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Obstacle Avoidance Drone by Deep Reinforcement Learning
+  and Its Racing with Human Pilot}} {{Obstacle Avoidance Drone by Deep
+  Reinforcement Learning and Its Racing with Human Pilot}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Sciences}{9}{}{24}.
+\newblock
+\begin{APACrefURL} \url{https://www.mdpi.com/2076-3417/9/24/5571}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

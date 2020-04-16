@@ -1,0 +1,59 @@
+\begin{thebibliography}{7}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{\discretionary{}{}{}https://doi.org/#1}\else
+  \providecommand{\doi}[1]{\discretionary{}{}{}\urlstyle{rm}\url{https://doi.org/#1}}\fi
+
+\bibitem[{Anwar(2019, October 23)}]{Anwar2019}
+Anwar, A., \enquote{{Deep Reinforcement Learning for Drones in 3D Realistic
+  Environments},} \emph{Towards Data Science}, 2019, October 23.
+\newblock
+  \urlprefix\url{https://towardsdatascience.com/deep-reinforcement-learning-for-drones-in-3d-realistic-environments-36821b6ee077}.
+
+\bibitem[{Araar et~al.(2016)Araar, Aouf, and Vitanov}]{Araar2016}
+Araar, O., Aouf, N., and Vitanov, I., \enquote{{Vision Based Autonomous Landing
+  of Multirotor UAV on Moving Platform},} \emph{Journal of Intelligent \&
+  Robotic Systems}, Vol.~85, 2016, pp. 369--384.
+\newblock
+  \urlprefix\url{https://link.springer.com/article/10.1007/s10846-018-0891-8}.
+
+\bibitem[{Carrio et~al.(2017, August 14)Carrio, Sampedro, Rodriguez-Ramos, and
+  Campoy1}]{Carrio2017}
+Carrio, A., Sampedro, C., Rodriguez-Ramos, A., and Campoy1, P., \enquote{{A
+  Review of Deep Learning Methods and Applications for Unmanned Aerial
+  Vehicles},} \emph{Journal of Sensors}, Vol. 2017, 2017, August 14.
+\newblock \urlprefix\url{https://www.hindawi.com/journals/js/2017/3296874/}.
+
+\bibitem[{Madaan et~al.(2017)Madaan, Saxena, Bonatti, Mukherjee, and
+  Scherer}]{Madaan}
+Madaan, R., Saxena, D.~M., Bonatti, R., Mukherjee, S., and Scherer, S.,
+  \enquote{{Deep Flight: Autonomous Quadrotor Navigation with Deep
+  Reinforcement Learning },} \emph{The Robotics Institute, Carnegie Mellon
+  University}, 2017.
+\newblock \urlprefix\url{https://www.cs.cmu.edu/~rbonatti/files/rss17.pdf}.
+
+\bibitem[{Pham et~al.(2018)Pham, La, Feil{-}Seifer, and Nguyen}]{Pham2018}
+Pham, H.~X., La, H.~M., Feil{-}Seifer, D., and Nguyen, L.~V.,
+  \enquote{Autonomous {UAV} Navigation Using Reinforcement Learning,}
+  \emph{CoRR}, Vol. abs/1801.05086, 2018.
+\newblock \urlprefix\url{http://arxiv.org/abs/1801.05086}.
+
+\bibitem[{Rodriguez-Ramos et~al.(2018, July 3)Rodriguez-Ramos, Sampedro, Bavle,
+  de~la Puente, and Campoy}]{Rodriguez2018}
+Rodriguez-Ramos, A., Sampedro, C., Bavle, H., de~la Puente, P., and Campoy, P.,
+  \enquote{{A Deep Reinforcement Learning Strategy for UAV Autonomous Landing
+  on a Moving Platform},} \emph{Journal of Intelligent \& Robotic Systems},
+  Vol.~93, 2018, July 3, pp. 351--366.
+\newblock
+  \urlprefix\url{https://link.springer.com/article/10.1007/s10846-018-0891-8}.
+
+\bibitem[{Shin et~al.(2019)Shin, Kang, and Kim}]{Shin2019}
+Shin, S.-Y., Kang, Y.-W., and Kim, Y.-G., \enquote{{Obstacle Avoidance Drone by
+  Deep Reinforcement Learning and Its Racing with Human Pilot},} \emph{Applied
+  Sciences}, Vol.~9, 2019, p.~24.
+\newblock \urlprefix\url{https://www.mdpi.com/2076-3417/9/24/5571}.
+
+\end{thebibliography}
