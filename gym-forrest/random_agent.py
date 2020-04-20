@@ -8,6 +8,7 @@ This inputs a random action into the forrest environment and renders its path un
 """
 import numpy as np
 import gym
+import gym_forrest
 
 env = gym.make('Forrest-v0')
 

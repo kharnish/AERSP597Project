@@ -7,7 +7,7 @@ Kelly Harnish
 This uses a Q-learning algorithm to train an epsilon-greedy agent to find the shortest path from the starting
 position to the target position while avoiding obstacles.
 
-Based off code authored by Anson Wong,
+Based on code authored by Anson Wong,
 from https://towardsdatascience.com/training-an-agent-to-beat-grid-world-fac8a48109a8
 and https://github.com/ankonzoid/LearningX/tree/master/classical_RL/gridworld,
 Accessed 7 Jan 2020

@@ -40,7 +40,8 @@ class ForrestEnv(gym.Env):
     def __init__(self):
         self.stateSize = (grid_rows, grid_cols)
         self.state = initialState  # (rows, columns) start in upper left corner
-        self.actionSize = 4  # up, right, down, left
+        # self.actionSize = 4  # up, right, down, left
+        self.actionSize = (4,)  # up, right, down, left
 
     def allowedActions(self):
         # Generate list of actions allowed depending on location
