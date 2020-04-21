@@ -16,6 +16,7 @@ import numpy as np
 import gym
 import gym_forrest
 import random
+import matplotlib.pyplot as plt
 
 
 class Agent:
@@ -36,12 +37,12 @@ class Agent:
         # Epsilon-greedy agent policy
         if random.uniform(0, 1) < self.epsilon:
             # explore
-            xp = np.random.choice(env.allowedActions())
+            xp = np.random.choice(env.allowed_actions())
             return xp
         else:
             # exploit on allowed actions
             state = env.state
-            actions_allowed = env.allowedActions()
+            actions_allowed = env.allowed_actions()
             Q_s = self.Q[state[0], state[1], actions_allowed]
             actions_greedy = actions_allowed[np.flatnonzero(Q_s == np.max(Q_s))]
             return np.random.choice(actions_greedy)
@@ -68,7 +69,6 @@ class Agent:
                 greedy_policy[i, j] = np.argmax(self.Q[i, j, :])
         print("\nGreedy policy(y, x):")
         print(greedy_policy)
-        print()
 
 
 def main():
@@ -78,6 +78,8 @@ def main():
     # Train agent
     print("\nTraining agent...\n")
     N_episodes = 500
+    reward_total = np.zeros((N_episodes))
+
     for episode in range(N_episodes):
         # Generate an episode
         iter_episode, reward_episode = 0, 0
@@ -94,14 +96,20 @@ def main():
             if done:
                 break
             state = state_next  # transition to next state
+        reward_total[episode] = reward_episode
 
         # Decay agent exploration parameter
         agent.epsilon = max(agent.epsilon * agent.epsilon_decay, 0.01)
 
         # Print
-        if (episode == 0) or (episode + 1) % 10 == 0:
-            print("[episode {}/{}] eps = {:.3F} -> iter = {}, rew = {:.1F}".format(
-                episode + 1, N_episodes, agent.epsilon, iter_episode, reward_episode))
+        # if (episode == 0) or (episode + 1) % 10 == 0:
+            # print("[episode {}/{}] eps = {:.3F} -> iter = {}, rew = {:.1F}".format(
+        # episode + 1, N_episodes, agent.epsilon, iter_episode, reward_episode))
+
+    plt.plot(reward_total)
+    plt.xlabel('Agent')
+    plt.ylabel('Reward')
+    # plt.show()
 
     # Print greedy policy
     agent.display_greedy_policy()

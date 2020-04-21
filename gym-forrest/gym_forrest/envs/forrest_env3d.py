@@ -34,7 +34,7 @@ winState = (4, 2)
 obstacles = np.array([[0, 2], [1, 2], [3, 1]])
 
 
-class ForrestEnv(gym.Env):
+class ForrestEnv3d(gym.Env):
     # metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 50}
 
     def __init__(self):
@@ -140,4 +140,4 @@ class ForrestEnv(gym.Env):
             location.set_offsets((x[frame], y[frame]))
 
         ani = FuncAnimation(fig, animate, frames=len(path), interval=2000)
-        ani.save('path2D.mp4', writer=writer)
+        ani.save('path3D.mp4', writer=writer)
