@@ -43,7 +43,10 @@ class Agent:
             # exploit on allowed actions
             state = env.state
             actions_allowed = env.allowed_actions()
-            Q_s = self.Q[state[0], state[1], actions_allowed]
+            if self.action_dim == (6,):
+                Q_s = self.Q[state[0], state[1], state[2], actions_allowed]  # for 3D environment
+            else:
+                Q_s = self.Q[state[0], state[1], actions_allowed]  # for 2D environment
             actions_greedy = actions_allowed[np.flatnonzero(Q_s == np.max(Q_s))]
             return np.random.choice(actions_greedy)
 
@@ -63,16 +66,26 @@ class Agent:
 
     def display_greedy_policy(self):
         # greedy policy = argmax[a'] Q[s,a']
-        greedy_policy = np.zeros((self.state_dim[0], self.state_dim[1]), dtype=int)
-        for i in range(self.state_dim[0]):
-            for j in range(self.state_dim[1]):
-                greedy_policy[i, j] = np.argmax(self.Q[i, j, :])
-        print("\nGreedy policy(y, x):")
-        print(greedy_policy)
+
+        if self.action_dim == (6,):
+            greedy_policy = np.zeros((self.state_dim[0], self.state_dim[1], self.state_dim[2]), dtype=int)
+            for i in range(self.state_dim[0]):
+                for j in range(self.state_dim[1]):
+                    for k in range(self.state_dim[2]):
+                        greedy_policy[i, j, k] = np.argmax(self.Q[i, j, k, :])
+            print("\nGreedy policy(y, x):")
+            print(greedy_policy)
+        else:
+            greedy_policy = np.zeros((self.state_dim[0], self.state_dim[1]), dtype=int)
+            for i in range(self.state_dim[0]):
+                for j in range(self.state_dim[1]):
+                    greedy_policy[i, j] = np.argmax(self.Q[i, j, :])
+            print("\nGreedy policy(y, x):")
+            print(greedy_policy)
 
 
 def main():
-    env = gym.make('Forrest-v0')
+    env = gym.make('Forrest-v1')
     agent = Agent(env)
 
     # Train agent
@@ -97,22 +110,21 @@ def main():
                 break
             state = state_next  # transition to next state
         reward_total[episode] = reward_episode
-
         # Decay agent exploration parameter
         agent.epsilon = max(agent.epsilon * agent.epsilon_decay, 0.01)
 
         # Print
-        # if (episode == 0) or (episode + 1) % 10 == 0:
-            # print("[episode {}/{}] eps = {:.3F} -> iter = {}, rew = {:.1F}".format(
-        # episode + 1, N_episodes, agent.epsilon, iter_episode, reward_episode))
+        if (episode == 0) or (episode+1) % 100 == 0:
+            print("[episode {}/{}] eps = {:.3F} -> iter = {}, rew = {:.1F}".
+                  format(episode + 1, N_episodes, agent.epsilon, iter_episode, reward_episode))
 
     plt.plot(reward_total)
     plt.xlabel('Agent')
     plt.ylabel('Reward')
-    # plt.show()
+    plt.show()
 
     # Print greedy policy
-    agent.display_greedy_policy()
+    # agent.display_greedy_policy()
 
     # Render optimal path
     path = np.asarray(pathList)

@@ -10,11 +10,15 @@ import numpy as np
 import gym
 import gym_forrest
 
-env = gym.make('Forrest-v0')
+env = gym.make('Forrest-v1')
+state = env.reset()  # starting state
+pathList = [np.asarray(state)]  # initialize list for rendering path
 
-pathList = ([[0, 0]])
 while True:
-    action = np.random.randint(low=0, high=4, size=1)
+    if env.actionSize == (6,):
+        action = np.random.randint(low=0, high=6, size=1)  # choose random action for 3D environment
+    else:
+        action = np.random.randint(low=0, high=4, size=1)  # choose random action for 2D environment
     steps, reward, done = env.step(action)
     pathList.append(steps)
     if done:

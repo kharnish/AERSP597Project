@@ -58,6 +58,7 @@ class ForrestEnv(gym.Env):
         actions_allowed = np.array(actions_allowed, dtype=int)
         return actions_allowed
 
+
     def step(self, action):
         # Given an action, verify that it is legal then calculate new position. Also calculate reward for that action
         def check_legal(row, col):
@@ -97,7 +98,7 @@ class ForrestEnv(gym.Env):
         # Calculate award based on steps taken and
         award = -0.1  # small punishment for each step taken
         for i in range(len(obstacles)):
-            if self.state[0] == obstacles[int(i), 0] and self.state[1] == obstacles[int(i), 1]:
+            if [self.state[0], self.state[1]] == [obstacles[i, 0], obstacles[i, 1]]:
                 award -= 100  # large punishment if in obstacle space
         if self.state == winState:
             award += 100  # large reward if target reached
@@ -140,4 +141,5 @@ class ForrestEnv(gym.Env):
             location.set_offsets((x[frame], y[frame]))
 
         ani = FuncAnimation(fig, animate, frames=len(path), interval=2000)
-        ani.save('path2D.mp4', writer=writer)
+        # ani.save('path2D.mp4', writer=writer)
+        plt.show()
