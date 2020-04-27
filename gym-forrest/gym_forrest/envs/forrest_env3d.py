@@ -5,7 +5,7 @@ Kelly Harnish
 9 Jan 2020
 
 This is a gym environment for training an RL agent in a 3D grid world based on the OpenAI gyms,
-with obstacles and a target. The grid is a a 5x5x5, shown in map.csv
+with obstacles and a target. The grid is a a 5x5x5, shown in map.csv, with the coordinate system shown:
 
 ^+y
 
@@ -128,7 +128,7 @@ class ForrestEnv3d(gym.Env):
         self.state = initialState
         return self.state
 
-    def render(self, path, mode='human'):
+    def render(self, path, title, mode='human'):
 
         # Set up formatting for the movie files
         Writer = animation.writers['ffmpeg']
@@ -172,6 +172,4 @@ class ForrestEnv3d(gym.Env):
             plt.scatter(x[frame], y[frame], color='k', marker='o', s=150)
 
         ani = FuncAnimation(fig, animate, frames=len(path), interval=2000)
-        ani.save('path3D.mp4', writer=writer)
-        #plt.show()
-
+        ani.save(title, writer=writer)

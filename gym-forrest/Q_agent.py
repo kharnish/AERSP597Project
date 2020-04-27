@@ -90,8 +90,9 @@ def main():
 
     # Train agent
     print("\nTraining agent...\n")
-    N_episodes = 500
-    reward_total = np.zeros((N_episodes))
+    N_episodes = 1000
+    reward_total = []
+    reward_average = []
 
     for episode in range(N_episodes):
         # Generate an episode
@@ -109,26 +110,35 @@ def main():
             if done:
                 break
             state = state_next  # transition to next state
-        reward_total[episode] = reward_episode
+        reward_total.append(reward_episode)
+        reward_average.append(np.mean(reward_total[max(0, episode - 100):(episode + 1)]))
+
         # Decay agent exploration parameter
         agent.epsilon = max(agent.epsilon * agent.epsilon_decay, 0.01)
 
         # Print
-        if (episode == 0) or (episode+1) % 100 == 0:
-            print("[episode {}/{}] eps = {:.3F} -> iter = {}, rew = {:.1F}".
-                  format(episode + 1, N_episodes, agent.epsilon, iter_episode, reward_episode))
+        if episode % 100 == 0:
+            print("Episode:", episode, "\tEpsilon:", '%.6f' % agent.epsilon, "\tEpisode Iters:" , iter_episode, "\t\tEpisode reward:",
+                  '%.3f' % reward_total[episode], "\t\tAvg reward (last 100):", '%.6f' % reward_average[episode])
+        if reward_average[episode] > 99.35:
+            print("Total Episodes: ", episode)
+            break
 
-    plt.plot(reward_total)
-    plt.xlabel('Agent')
+    plt.plot(reward_total, '--g', label='Total Reward')
+    plt.plot(reward_average, 'b', label='Average Reward')
+    plt.rcParams["font.family"] = "serif"
+    plt.legend()
+    plt.xlabel('Episode')
     plt.ylabel('Reward')
     plt.show()
+    plt.savefig('Q_agent_3D.png')
 
     # Print greedy policy
     # agent.display_greedy_policy()
 
     # Render optimal path
     path = np.asarray(pathList)
-    env.render(path)
+    env.render(path, 'Q_agent_3D.mp4')
 
 
 # Driver

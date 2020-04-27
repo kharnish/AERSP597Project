@@ -43,6 +43,9 @@ class ForrestEnv(gym.Env):
         # self.actionSize = 4  # up, right, down, left
         self.actionSize = (4,)  # up, right, down, left
 
+    def get_size(self):
+        return grid_rows*grid_cols, 4
+
     def allowed_actions(self):
         # Generate list of actions allowed depending on location
         actions_allowed = []
@@ -109,7 +112,7 @@ class ForrestEnv(gym.Env):
         self.state = initialState
         return self.state
 
-    def render(self, path, mode='human'):
+    def render(self, path, title, mode='human'):
 
         # Set up formatting for the movie files
         Writer = animation.writers['ffmpeg']
@@ -141,5 +144,5 @@ class ForrestEnv(gym.Env):
             location.set_offsets((x[frame], y[frame]))
 
         ani = FuncAnimation(fig, animate, frames=len(path), interval=2000)
-        # ani.save('path2D.mp4', writer=writer)
-        plt.show()
+        ani.save(title, writer=writer)
+        # plt.show()
