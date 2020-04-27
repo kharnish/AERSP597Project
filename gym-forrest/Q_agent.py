@@ -85,12 +85,12 @@ class Agent:
 
 
 def main():
-    env = gym.make('Forrest-v1')
+    env = gym.make('Forrest-v0')
     agent = Agent(env)
 
     # Train agent
     print("\nTraining agent...\n")
-    N_episodes = 1000
+    N_episodes = 10000
     reward_total = []
     reward_average = []
 
@@ -120,7 +120,7 @@ def main():
         if episode % 100 == 0:
             print("Episode:", episode, "\tEpsilon:", '%.6f' % agent.epsilon, "\tEpisode Iters:" , iter_episode, "\t\tEpisode reward:",
                   '%.3f' % reward_total[episode], "\t\tAvg reward (last 100):", '%.6f' % reward_average[episode])
-        if reward_average[episode] > 99.35:
+        if reward_average[episode] > 98:  # try 99.35 for 2D and 98 for 3D
             print("Total Episodes: ", episode)
             break
 
@@ -130,15 +130,15 @@ def main():
     plt.legend()
     plt.xlabel('Episode')
     plt.ylabel('Reward')
+    plt.savefig('Q_agent_2D.png')
     plt.show()
-    plt.savefig('Q_agent_3D.png')
 
     # Print greedy policy
     # agent.display_greedy_policy()
 
     # Render optimal path
     path = np.asarray(pathList)
-    env.render(path, 'Q_agent_3D.mp4')
+    env.render(path, 'Q_agent_2D.mp4')
 
 
 # Driver

@@ -137,19 +137,10 @@ class ForrestEnv3d(gym.Env):
         # define figure
         fig, ax = plt.subplots()
         ax.grid()
-        # plt.xticks(np.arange(0, 5, 1))
         plt.xlim(0, 5)
         plt.ylim(0, 5)
         plt.title("Floor 0")
 
-        # Mark initial start and obstacles
-        """plt.scatter(winState[1] + 0.5, winState[0] + 0.5, color='r', marker='H', s=20)
-        plt.scatter(initialState[1] + 0.5,  initialState[0] + 0.5, color='g', marker='*', s=20)
-        for ii in range(len(obstacles)):
-            if obstacles[ii, 2] == initialState[2]:
-                plt.scatter(obstacles[ii, 1] + 0.5,  obstacles[ii, 0] + 0.5, color='k', marker='x', s=30)
-        plt.scatter(initialState[1] + 0.5,  initialState[0] + 0.5, color='k', marker='o', s=150)
-"""
         def animate(frame):
             x = path[:, 0] + 0.5
             y = path[:, 1] + 0.5
@@ -169,7 +160,7 @@ class ForrestEnv3d(gym.Env):
                 if obstacles[iii, 2] == z[frame]:
                     plt.plot(obstacles[iii, 1] + 0.5,  obstacles[iii, 0] + 0.5, color='k', marker='x', markersize=30)
 
-            plt.scatter(x[frame], y[frame], color='k', marker='o', s=150)
+            plt.scatter(x[frame], y[frame], color='k', marker='D', s=200)
 
         ani = FuncAnimation(fig, animate, frames=len(path), interval=2000)
         ani.save(title, writer=writer)
