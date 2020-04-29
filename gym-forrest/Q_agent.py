@@ -26,12 +26,12 @@ class Agent:
         self.state_dim = env.stateSize
         self.action_dim = env.actionSize
         # Agent learning parameters
-        self.epsilon = 1.0  # initial exploration probability
-        self.epsilon_decay = 0.99  # epsilon decay after each episode
-        self.beta = 0.99  # learning rate
-        self.gamma = 0.99  # reward discount factor
+        self.epsilon = 1.0          # initial exploration probability
+        self.epsilon_decay = 0.99   # epsilon decay after each episode
+        self.beta = 0.99            # learning rate
+        self.gamma = 0.99           # reward discount factor
         # Initialize Q[[s],a] table
-        self.Q = np.zeros(self.state_dim + self.action_dim, dtype=float)
+        self.Q = np.zeros((self.state_dim[0], self.state_dim[1], self.action_dim), dtype=float)
 
     def get_action(self, env):
         # Epsilon-greedy agent policy
@@ -43,7 +43,7 @@ class Agent:
             # exploit on allowed actions
             state = env.state
             actions_allowed = env.allowed_actions()
-            if self.action_dim == (6,):
+            if self.action_dim == 6:
                 Q_s = self.Q[state[0], state[1], state[2], actions_allowed]  # for 3D environment
             else:
                 Q_s = self.Q[state[0], state[1], actions_allowed]  # for 2D environment
@@ -67,7 +67,7 @@ class Agent:
     def display_greedy_policy(self):
         # greedy policy = argmax[a'] Q[s,a']
 
-        if self.action_dim == (6,):
+        if self.action_dim == 6:
             greedy_policy = np.zeros((self.state_dim[0], self.state_dim[1], self.state_dim[2]), dtype=int)
             for i in range(self.state_dim[0]):
                 for j in range(self.state_dim[1]):

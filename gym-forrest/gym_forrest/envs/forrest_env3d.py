@@ -31,8 +31,8 @@ import mpl_toolkits.mplot3d.axes3d as p3
 grid_rows = 5
 grid_cols = 5
 grid_height = 5
-initialState = (0, 0, 0)
-winState = (4, 4, 3)
+initialState = np.array([0, 0, 0])
+winState = np.array([4, 4, 3])
 
 raw_map = np.loadtxt("map.csv", delimiter=",")
 obstacles = np.zeros((1, 3))
@@ -48,8 +48,8 @@ class ForrestEnv3d(gym.Env):
 
     def __init__(self):
         self.stateSize = (grid_rows, grid_cols, grid_height)
-        self.state = initialState  # (columns, rows, height) start in upper left corner
-        self.actionSize = (6,)
+        self.state = initialState  # columns, rows, height
+        self.actionSize = 6
 
     def allowed_actions(self):
         # Generate list of actions allowed depending on location
@@ -106,7 +106,7 @@ class ForrestEnv3d(gym.Env):
         self.state = (new_col, new_row, new_hei)
         reward = self.give_reward()
 
-        if self.state == winState:
+        if (self.state[0] == winState[0]) & (self.state[1] == winState[1]) & (self.state[2] == winState[2]):
             is_done = True
         else:
             is_done = False
@@ -119,7 +119,7 @@ class ForrestEnv3d(gym.Env):
         for ii in range(len(obstacles)):
             if [self.state[0], self.state[1], self.state[2]] == [obstacles[ii, 0], obstacles[ii, 1], obstacles[ii, 2]]:
                 award -= 100  # large punishment if in obstacle space
-        if self.state == winState:
+        if (self.state[0] == winState[0]) & (self.state[1] == winState[1]) & (self.state[2] == winState[2]):
             award += 100  # large reward if target reached
         return award
 

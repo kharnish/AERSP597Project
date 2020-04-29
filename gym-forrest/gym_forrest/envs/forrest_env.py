@@ -29,22 +29,20 @@ from matplotlib.animation import FuncAnimation
 
 grid_rows = 5
 grid_cols = 3
-initialState = (0, 0)
-winState = (4, 2)
+initialState = np.array([0, 0])
+winState = np.array([4, 2])
 obstacles = np.array([[0, 2], [1, 2], [3, 1]])
 
 
 class ForrestEnv(gym.Env):
-    # metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 50}
 
     def __init__(self):
         self.stateSize = (grid_rows, grid_cols)
         self.state = initialState  # (rows, columns) start in upper left corner
-        # self.actionSize = 4  # up, right, down, left
-        self.actionSize = (4,)  # up, right, down, left
+        self.actionSize = 4
 
     def get_size(self):
-        return grid_rows*grid_cols, 4
+        return grid_rows * grid_cols, 4
 
     def allowed_actions(self):
         # Generate list of actions allowed depending on location
@@ -60,7 +58,6 @@ class ForrestEnv(gym.Env):
             actions_allowed.append(1)
         actions_allowed = np.array(actions_allowed, dtype=int)
         return actions_allowed
-
 
     def step(self, action):
         # Given an action, verify that it is legal then calculate new position. Also calculate reward for that action
@@ -90,7 +87,7 @@ class ForrestEnv(gym.Env):
         self.state = (new_row, new_col)
         reward = self.give_reward()
 
-        if self.state == winState:
+        if (self.state[0] == winState[0]) & (self.state[1] == winState[1]):
             is_done = True
         else:
             is_done = False
@@ -103,7 +100,8 @@ class ForrestEnv(gym.Env):
         for i in range(len(obstacles)):
             if [self.state[0], self.state[1]] == [obstacles[i, 0], obstacles[i, 1]]:
                 award -= 100  # large punishment if in obstacle space
-        if self.state == winState:
+        # if self.state == winState:
+        if (self.state[0] == winState[0]) & (self.state[1] == winState[1]):
             award += 100  # large reward if target reached
         return award
 

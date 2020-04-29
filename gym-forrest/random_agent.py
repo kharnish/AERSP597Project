@@ -15,7 +15,7 @@ state = env.reset()  # starting state
 pathList = [np.asarray(state)]  # initialize list for rendering path
 
 while True:
-    if env.actionSize == (6,):
+    if env.actionSize == 6:
         action = np.random.randint(low=0, high=6, size=1)  # choose random action for 3D environment
     else:
         action = np.random.randint(low=0, high=4, size=1)  # choose random action for 2D environment
@@ -24,5 +24,5 @@ while True:
     if done:
         break
 path = np.asarray(pathList)
-env.render(path)
+env.render(path, 'Random_Agent_3D.mp4')
 env.close()
