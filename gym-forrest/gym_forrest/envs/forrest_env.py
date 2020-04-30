@@ -31,7 +31,7 @@ grid_rows = 5
 grid_cols = 3
 initialState = np.array([0, 0])
 winState = np.array([4, 2])
-obstacles = np.array([[0, 2], [1, 2], [3, 1]])
+obstacles = np.array([[0, 2], [1, 1], [3, 1]])
 
 
 class ForrestEnv(gym.Env):
@@ -87,7 +87,7 @@ class ForrestEnv(gym.Env):
         self.state = (new_row, new_col)
         reward = self.give_reward()
 
-        if (self.state[0] == winState[0]) & (self.state[1] == winState[1]):
+        if (self.state[0] == winState[0]) and (self.state[1] == winState[1]):
             is_done = True
         else:
             is_done = False
@@ -101,7 +101,7 @@ class ForrestEnv(gym.Env):
             if [self.state[0], self.state[1]] == [obstacles[i, 0], obstacles[i, 1]]:
                 award -= 100  # large punishment if in obstacle space
         # if self.state == winState:
-        if (self.state[0] == winState[0]) & (self.state[1] == winState[1]):
+        if (self.state[0] == winState[0]) and (self.state[1] == winState[1]):
             award += 100  # large reward if target reached
         return award
 
@@ -128,7 +128,7 @@ class ForrestEnv(gym.Env):
         plt.plot(initialState[1] + 0.5, 4 - initialState[0] + 0.5, color='g', marker='*', markersize=20)
         for i in range(len(obstacles)):
             plt.plot(obstacles[i, 1] + 0.5, 4 - obstacles[i, 0] + 0.5, color='k', marker='x', markersize=30)
-        location = plt.scatter(initialState[1] + 0.5, 4 - initialState[0] + 0.5, color='k', marker='o', s=100)
+        location = plt.scatter(initialState[1] + 0.5, 4 - initialState[0] + 0.5, color='k', marker='D', s=200)
 
         def animate(frame):
             # Note current position to remove after next step

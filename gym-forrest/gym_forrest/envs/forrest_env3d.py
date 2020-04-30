@@ -33,6 +33,7 @@ grid_cols = 5
 grid_height = 5
 initialState = np.array([0, 0, 0])
 winState = np.array([4, 4, 3])
+winState = np.array([2, 2, 2])
 
 raw_map = np.loadtxt("map.csv", delimiter=",")
 obstacles = np.zeros((1, 3))
@@ -106,7 +107,7 @@ class ForrestEnv3d(gym.Env):
         self.state = (new_col, new_row, new_hei)
         reward = self.give_reward()
 
-        if (self.state[0] == winState[0]) & (self.state[1] == winState[1]) & (self.state[2] == winState[2]):
+        if (self.state[0] == winState[0]) and (self.state[1] == winState[1]) and (self.state[2] == winState[2]):
             is_done = True
         else:
             is_done = False
@@ -117,9 +118,9 @@ class ForrestEnv3d(gym.Env):
         # Calculate award based on steps taken and
         award = -0.1  # small punishment for each step taken
         for ii in range(len(obstacles)):
-            if [self.state[0], self.state[1], self.state[2]] == [obstacles[ii, 0], obstacles[ii, 1], obstacles[ii, 2]]:
+            if self.state[0] == [obstacles[ii, 0] and self.state[1] == [obstacles[ii, 1] and self.state[2]] == obstacles[ii, 2]]:
                 award -= 100  # large punishment if in obstacle space
-        if (self.state[0] == winState[0]) & (self.state[1] == winState[1]) & (self.state[2] == winState[2]):
+        if (self.state[0] == winState[0]) and (self.state[1] == winState[1]) and (self.state[2] == winState[2]):
             award += 100  # large reward if target reached
         return award
 
@@ -164,3 +165,4 @@ class ForrestEnv3d(gym.Env):
 
         ani = FuncAnimation(fig, animate, frames=len(path), interval=2000)
         ani.save(title, writer=writer)
+        # plt.show()

@@ -31,7 +31,10 @@ class Agent:
         self.beta = 0.99            # learning rate
         self.gamma = 0.99           # reward discount factor
         # Initialize Q[[s],a] table
-        self.Q = np.zeros((self.state_dim[0], self.state_dim[1], self.action_dim), dtype=float)
+        if env.actionSize == 6:
+            self.Q = np.zeros((self.state_dim[0], self.state_dim[1], self.state_dim[2], self.action_dim), dtype=float)
+        else:
+            self.Q = np.zeros((self.state_dim[0], self.state_dim[1], self.action_dim), dtype=float)
 
     def get_action(self, env):
         # Epsilon-greedy agent policy
@@ -85,12 +88,12 @@ class Agent:
 
 
 def main():
-    env = gym.make('Forrest-v0')
+    env = gym.make('Forrest-v1')
     agent = Agent(env)
 
     # Train agent
     print("\nTraining agent...\n")
-    N_episodes = 10000
+    N_episodes = 750
     reward_total = []
     reward_average = []
 
@@ -109,6 +112,8 @@ def main():
             reward_episode += reward
             if done:
                 break
+            if iter_episode == 5000:
+                break
             state = state_next  # transition to next state
         reward_total.append(reward_episode)
         reward_average.append(np.mean(reward_total[max(0, episode - 100):(episode + 1)]))
@@ -117,20 +122,19 @@ def main():
         agent.epsilon = max(agent.epsilon * agent.epsilon_decay, 0.01)
 
         # Print
-        if episode % 100 == 0:
+        if episode % 10 == 0:
             print("Episode:", episode, "\tEpsilon:", '%.6f' % agent.epsilon, "\tEpisode Iters:" , iter_episode, "\t\tEpisode reward:",
                   '%.3f' % reward_total[episode], "\t\tAvg reward (last 100):", '%.6f' % reward_average[episode])
         if reward_average[episode] > 98:  # try 99.35 for 2D and 98 for 3D
             print("Total Episodes: ", episode)
             break
 
+    plt.rcParams["font.family"] = "serif"
     plt.plot(reward_total, '--g', label='Total Reward')
     plt.plot(reward_average, 'b', label='Average Reward')
-    plt.rcParams["font.family"] = "serif"
     plt.legend()
     plt.xlabel('Episode')
     plt.ylabel('Reward')
-    plt.savefig('Q_agent_2D.png')
     plt.show()
 
     # Print greedy policy
@@ -138,7 +142,12 @@ def main():
 
     # Render optimal path
     path = np.asarray(pathList)
-    env.render(path, 'Q_agent_2D.mp4')
+    if env.actionSize == 6:
+        plt.savefig('Q_agent_3D.png')
+        env.render(path, 'Q_agent_3D.mp4')
+    else:
+        plt.savefig('Q_agent_2D.png')
+        env.render(path, 'Q_agent_2D.mp4')
 
 
 # Driver
